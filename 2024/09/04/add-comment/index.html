@@ -20,28 +20,32 @@
     var CONFIG = {"hostname":"xqz1310783614.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="黄色枫树海">
-<meta property="og:url" content="http://xqz1310783614.github.io/index.html">
+  <meta name="description" content="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;今天上线了评论系统，过程还是很简单的，依赖于disqus，只需要在后台配置好shortname就可以使用了。下面介绍一下搭建方法。 步骤 1：安装 Hexo 和 Next 主题确保你已经安装了 Hexo 并且已经应用了 Next 主题。如果还没有，可以按照以下步骤进行安装： 12345678910# 安装 Hexo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="上线评论系统">
+<meta property="og:url" content="http://xqz1310783614.github.io/2024/09/04/add-comment/index.html">
 <meta property="og:site_name" content="黄色枫树海">
+<meta property="og:description" content="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;今天上线了评论系统，过程还是很简单的，依赖于disqus，只需要在后台配置好shortname就可以使用了。下面介绍一下搭建方法。 步骤 1：安装 Hexo 和 Next 主题确保你已经安装了 Hexo 并且已经应用了 Next 主题。如果还没有，可以按照以下步骤进行安装： 12345678910# 安装 Hexo">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-09-04T15:57:53.000Z">
+<meta property="article:modified_time" content="2024-09-04T16:00:31.668Z">
 <meta property="article:author" content="黄色枫树海">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://xqz1310783614.github.io/">
+<link rel="canonical" href="http://xqz1310783614.github.io/2024/09/04/add-comment/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>黄色枫树海</title>
+  <title>上线评论系统 | 黄色枫树海</title>
   
 
 
@@ -139,9 +143,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
+
+    
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
@@ -157,10 +162,9 @@
       <meta itemprop="name" content="黄色枫树海">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/09/04/add-comment/" class="post-title-link" itemprop="url">上线评论系统</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          上线评论系统
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -204,7 +208,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;今天上线了评论系统，过程还是很简单的，依赖于disqus，只需要在后台配置好shortname就可以使用了。下面介绍一下搭建方法。</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;今天上线了评论系统，过程还是很简单的，依赖于disqus，只需要在后台配置好shortname就可以使用了。下面介绍一下搭建方法。</p>
 <h3 id="步骤-1：安装-Hexo-和-Next-主题"><a href="#步骤-1：安装-Hexo-和-Next-主题" class="headerlink" title="步骤 1：安装 Hexo 和 Next 主题"></a>步骤 1：安装 Hexo 和 Next 主题</h3><p>确保你已经安装了 Hexo 并且已经应用了 Next 主题。如果还没有，可以按照以下步骤进行安装：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 安装 Hexo</span></span><br><span class="line">npm install -g hexo-cli</span><br><span class="line"></span><br><span class="line"><span class="comment"># 初始化 Hexo 项目</span></span><br><span class="line">hexo init my-blog</span><br><span class="line"><span class="built_in">cd</span> my-blog</span><br><span class="line">npm install</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装 Next 主题</span></span><br><span class="line">git <span class="built_in">clone</span> https://github.com/next-theme/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
 
@@ -235,180 +239,43 @@
 
 <h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>通过以上步骤，你可以在 Hexo + Next 主题中成功添加评论系统。根据你的需求选择合适的评论系统，并按照相应的配置进行设置。希望这些步骤能帮助你顺利集成评论系统到你的博客中。</p>
 
-      
     </div>
 
     
     
     
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://xqz1310783614.github.io/2024/09/03/hello-blog/">
+        
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="黄色枫树海">
-      <meta itemprop="description" content="">
-    </span>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="黄色枫树海">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/09/03/hello-blog/" class="post-title-link" itemprop="url">起始</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2024-09-03 22:41:34" itemprop="dateCreated datePublished" datetime="2024-09-03T22:41:34+08:00">2024-09-03</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-09-04 00:14:04" itemprop="dateModified" datetime="2024-09-04T00:14:04+08:00">2024-09-04</time>
-              </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus：</span>
-    
-    <a title="disqus" href="/2024/09/03/hello-blog/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2024/09/03/hello-blog/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;今天开始记录自己的感悟，记录自己的生活，记录自己的技术，记录自己的成长。争取能够做到每周一篇，及时审视自己的内心，当自己的心灵医生吧。</p>
-<h3 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;今年是大学毕业的第四年，工作了四年，感觉自己现在非常迷茫，有时候寻不到自己快乐的意义，这里指的是自己到底喜欢什么，考虑了很久，还是没想明白呢。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;但是可以明确的一点就是，需要把现有工作做好，让自己在工作方向上起码能够立足，多挣点钱，让自己心里面能够安心。那么接下来的时候就要把自己需要掌握的东西列出来。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;但是呢今天就先来不及列了，今天搭建这个博客花了一晚上的时间，该睡觉了。</p>
-
-      
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2024/09/03/hello-blog/" rel="prev" title="起始">
+      <i class="fa fa-chevron-left"></i> 起始
+    </a></div>
+      <div class="post-nav-item"></div>
     </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
       </footer>
+    
   </article>
   
   
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://xqz1310783614.github.io/2024/09/03/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="黄色枫树海">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="黄色枫树海">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/09/03/hello-world/" class="post-title-link" itemprop="url">黄色枫树林</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2024-09-03 22:01:28 / 修改时间：23:34:41" itemprop="dateCreated datePublished" datetime="2024-09-03T22:01:28+08:00">2024-09-03</time>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus：</span>
-    
-    <a title="disqus" href="/2024/09/03/hello-world/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2024/09/03/hello-world/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><strong>今天开始这就是我的网络树洞了。</strong></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
   
 
 
 
           </div>
           
+    
+  <div class="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -455,6 +322,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AD%A5%E9%AA%A4-1%EF%BC%9A%E5%AE%89%E8%A3%85-Hexo-%E5%92%8C-Next-%E4%B8%BB%E9%A2%98"><span class="nav-number">1.</span> <span class="nav-text">步骤 1：安装 Hexo 和 Next 主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AD%A5%E9%AA%A4-2%EF%BC%9A%E9%85%8D%E7%BD%AE-Next-%E4%B8%BB%E9%A2%98"><span class="nav-number">2.</span> <span class="nav-text">步骤 2：配置 Next 主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AD%A5%E9%AA%A4-3%EF%BC%9A%E9%80%89%E6%8B%A9%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F"><span class="nav-number">3.</span> <span class="nav-text">步骤 3：选择评论系统</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-%E6%B3%A8%E5%86%8C-Disqus"><span class="nav-number">3.1.</span> <span class="nav-text">3.1 注册 Disqus</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-%E9%85%8D%E7%BD%AE-Disqus"><span class="nav-number">3.2.</span> <span class="nav-text">3.2 配置 Disqus</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AD%A5%E9%AA%A4-4%EF%BC%9A%E9%83%A8%E7%BD%B2%E5%92%8C%E6%B5%8B%E8%AF%95"><span class="nav-number">4.</span> <span class="nav-text">步骤 4：部署和测试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F"><span class="nav-number">5.</span> <span class="nav-text">其他评论系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">6.</span> <span class="nav-text">总结</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -565,6 +433,26 @@
   }
   // defer loading until the whole page loading is completed
   window.addEventListener('load', loadCount, false);
+</script>
+<script>
+  var disqus_config = function() {
+    this.page.url = "http://xqz1310783614.github.io/2024/09/04/add-comment/";
+    this.page.identifier = "2024/09/04/add-comment/";
+    this.page.title = "上线评论系统";
+    };
+  NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
+    if (window.DISQUS) {
+      DISQUS.reset({
+        reload: true,
+        config: disqus_config
+      });
+    } else {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://huangsefeng.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', '' + +new Date());
+      (d.head || d.body).appendChild(s);
+    }
+  });
 </script>
 
 </body>
