@@ -20,15 +20,15 @@
     var CONFIG = {"hostname":"xqz1310783614.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="Hexo 博客添加文章分类功能 🗂️ 1. 文章分类设置 📝 在文章的 Front-matter 中添加 categories 字段：  1 2 3 4 5 6 7 8 9 10   --- title: 探索 JavaScript 的奥秘 date: 2023-04-20 14:30:00 categories:    - 技术   - 编程   - JavaScript ---  今天我们">
+  <meta name="description" content="Hexo 博客添加文章分类功能 🗂️1. 文章分类设置 📝在文章的 Front-matter 中添加 categories 字段： 12345678910---title: 探索 JavaScript 的奥秘date: 2023-04-20 14:30:00categories:   - 技术  - 编程  - JavaScript---今天我们来深入了解 JavaScript 的一些高级特性">
 <meta property="og:type" content="article">
 <meta property="og:title" content="博客分类">
 <meta property="og:url" content="http://xqz1310783614.github.io/2024/09/06/blog-categories/index.html">
 <meta property="og:site_name" content="黄色枫树海">
-<meta property="og:description" content="Hexo 博客添加文章分类功能 🗂️ 1. 文章分类设置 📝 在文章的 Front-matter 中添加 categories 字段：  1 2 3 4 5 6 7 8 9 10   --- title: 探索 JavaScript 的奥秘 date: 2023-04-20 14:30:00 categories:    - 技术   - 编程   - JavaScript ---  今天我们">
+<meta property="og:description" content="Hexo 博客添加文章分类功能 🗂️1. 文章分类设置 📝在文章的 Front-matter 中添加 categories 字段： 12345678910---title: 探索 JavaScript 的奥秘date: 2023-04-20 14:30:00categories:   - 技术  - 编程  - JavaScript---今天我们来深入了解 JavaScript 的一些高级特性">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-09-05T16:01:40.000Z">
-<meta property="article:modified_time" content="2024-09-17T13:30:12.814Z">
+<meta property="article:modified_time" content="2024-09-17T13:38:53.788Z">
 <meta property="article:author" content="黄色枫树海">
 <meta name="twitter:card" content="summary">
 
@@ -182,7 +182,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-09-17 21:30:12" itemprop="dateModified" datetime="2024-09-17T21:30:12+08:00">2024-09-17</time>
+                <time title="修改时间：2024-09-17 21:38:53" itemprop="dateModified" datetime="2024-09-17T21:38:53+08:00">2024-09-17</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -225,7 +225,7 @@
       
         <h1 id="Hexo-博客添加文章分类功能-🗂️"><a href="#Hexo-博客添加文章分类功能-🗂️" class="headerlink" title="Hexo 博客添加文章分类功能 🗂️"></a>Hexo 博客添加文章分类功能 🗂️</h1><h2 id="1-文章分类设置-📝"><a href="#1-文章分类设置-📝" class="headerlink" title="1. 文章分类设置 📝"></a>1. 文章分类设置 📝</h2><p>在文章的 Front-matter 中添加 <code>categories</code> 字段：</p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 探索 JavaScript 的奥秘</span><br><span class="line">date: 2023-04-20 14:30:00</span><br><span class="line">categories: </span><br><span class="line"><span class="bullet">  -</span> 技术</span><br><span class="line"><span class="bullet">  -</span> 编程</span><br><span class="line"><span class="section">  - JavaScript</span></span><br><span class="line"><span class="section">---</span></span><br><span class="line"></span><br><span class="line">今天我们来深入了解 JavaScript 的一些高级特性...</span><br></pre></td></tr></table></figure>
-
+<span id="more"></span>
 
 <h2 id="2-创建分类页面-🆕"><a href="#2-创建分类页面-🆕" class="headerlink" title="2. 创建分类页面 🆕"></a>2. 创建分类页面 🆕</h2><p>在终端中运行：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page categories</span><br></pre></td></tr></table></figure>
